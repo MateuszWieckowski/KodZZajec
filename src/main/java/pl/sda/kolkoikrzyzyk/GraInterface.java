@@ -32,4 +32,16 @@ public class GraInterface {
 		return pozycja;
 
 	}
+	
+	public void pokazPlansze(Plansza plansza){
+		
+		System.out.println(plansza.toString());
+	}
+	
+	public void podanoNiePoprawnePole(){
+		
+		System.out.println("Podano niepoprawne pole. Spróbuj jeszcze raz.");
+		Scanner scanner = new Scanner(System.in);
+		scanner.nextLine();
+	}
 }
