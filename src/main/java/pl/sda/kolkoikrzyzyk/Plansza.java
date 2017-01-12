@@ -6,13 +6,17 @@ public class Plansza {
 
 	private String[] pola;
 
+	public String[] getPola() {
+		return pola;
+	}
+
 	public Plansza() {
 
 		pola = new String[9];
-		
-		for(int i = 1; i <= pola.length; i++){
-			
-			pola[i -1] = String.valueOf(i);
+
+		for (int i = 1; i <= pola.length; i++) {
+
+			pola[i - 1] = String.valueOf(i);
 		}
 	}
 

@@ -34,6 +34,7 @@ public class KolkoIKrzyzyk {
 				aktualnyGracz = gracz2;
 			}
 			wstawianyZnak = mapaGraczy.get(aktualnyGracz);
+
 			do {
 
 				int pozycja = graInterface.podajPole(aktualnyGracz);
@@ -44,6 +45,14 @@ public class KolkoIKrzyzyk {
 					graInterface.podanoNiePoprawnePole();
 				}
 			} while (!czyWstawiono);
+
+			if (KolkoIKrzyzykUtil.czyZakonczonoGre(plansza)) {
+
+				graInterface.pokazPlansze(plansza);
+				graInterface.wygranoGre(aktualnyGracz);
+
+				break;
+			}
 
 		}
 		graInterface.pokazPlansze(plansza);
